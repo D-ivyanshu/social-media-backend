@@ -4,9 +4,8 @@ const likeService = new LikeService();
 
 export const toggleLike = async (req, res) => {
     try {
-        console.log(req.query.modelType, req.query.modelId, req.body);
         const response = await likeService.toggleLike(req.query.modelId, req.query.modelType, req.body.userId);
-        res.status(200).json({
+        return res.status(200).json({
             success: true,
             message: 'Successfully toggled like',
             data: response,
@@ -14,7 +13,7 @@ export const toggleLike = async (req, res) => {
         });
     } catch (error) {
         console.log(error);
-        res.status(500).json({
+        return res.status(500).json({
             success: false,
             message: 'Something went wrong',
             data: {},

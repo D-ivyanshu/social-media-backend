@@ -27,3 +27,5 @@ OWN
 - if a user get deleted then delete all the post of him (mongoose post hooks) 
 - if we need to update then change all the hashtags if want to do that functions. 
 - We can make like / dislike seperately     
+
+- comment nested how to show that ???? ^_^
